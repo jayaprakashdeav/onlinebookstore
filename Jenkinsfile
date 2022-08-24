@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('echo') {
+    stage('Build_project') {
       steps {
-        echo 'Hello'
+        sh 'sudo mvn clean package'
       }
     }
 
