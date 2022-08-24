@@ -8,14 +8,14 @@ pipeline {
   stages {
     stage('clean_and_git_clone') {
       steps {
-        sh 'sudo rm -r /opt/workspace/groovy_example_J2EE/*'
+//         sh 'sudo rm -r /opt/workspace/groovy_example_J2EE/*'
         git(url: 'https://github.com/jayaprakashdeav/onlinebookstore.git', branch: 'J2EE', credentialsId: 'git_token')
       }
     }
 
     stage('Build_project') {
       steps {
-        sh 'sudo mvn clean package'
+        sh 'mvn clean package'
       }
     }
 
