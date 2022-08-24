@@ -13,5 +13,13 @@ pipeline {
       }
     }
 
+    stage('Deploy_project') {
+      steps {
+        sh '''sudo service tomcat9 stop
+sudo cp  target/onlinebookstore-0.0.1-SNAPSHOT.war /var/lib/tomcat9/webapps/
+sudo service tomcat9 start'''
+      }
+    }
+
   }
 }
