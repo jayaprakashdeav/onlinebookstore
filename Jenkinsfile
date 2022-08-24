@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('git_clone') {
+    stage('clean_and_git_clone') {
       steps {
-        git(url: 'https://github.com/jayaprakashdeav/onlinebookstore.git', branch: 'J2EE', credentialsId: 'git_token')
         sh 'sudo rm -r /opt/workspace/groovy_example_J2EE/*'
+        git(url: 'https://github.com/jayaprakashdeav/onlinebookstore.git', branch: 'J2EE', credentialsId: 'git_token')
       }
     }
 
