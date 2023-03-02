@@ -1,0 +1,7 @@
+echo '
+#!/bin/bash 
+echo "script name: $0"
+echo "first arg: $1"
+echo "second arg: $2"
+echo "third arg: $3" ' > args.sh
+bash args.sh arg1 arg2 arg3
