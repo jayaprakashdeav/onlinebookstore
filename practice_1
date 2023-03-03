@@ -5,9 +5,3 @@ echo "first arg: $1"
 echo "second arg: $2"
 echo "third arg: $3" ' > args.sh
 bash args.sh arg1 arg2 arg3
-
-
-
-num1=10
-num2=20
-num=`expr $num1 + $num2`
