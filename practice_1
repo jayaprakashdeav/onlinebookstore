@@ -9,5 +9,3 @@ bash args.sh arg1 arg2 arg3
 read $1
 read $2
 echo $! + $2
-
-i have added a new sentence
